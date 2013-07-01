@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		490BD5DF178228FD0008DBD6 /* retina_wood_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */; };
+		490BD5E0178228FD0008DBD6 /* retina_wood_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */; };
+		490BD5E1178228FD0008DBD6 /* retina_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DE178228FD0008DBD6 /* retina_wood.png */; };
 		499156BB17820908007CEA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BA17820908007CEA07 /* UIKit.framework */; };
 		499156BD17820908007CEA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BC17820908007CEA07 /* Foundation.framework */; };
 		499156BF17820908007CEA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BE17820908007CEA07 /* CoreGraphics.framework */; };
@@ -16,9 +19,19 @@
 		499156CD17820908007CEA07 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 499156CC17820908007CEA07 /* Default.png */; };
 		499156CF17820908007CEA07 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499156CE17820908007CEA07 /* Default@2x.png */; };
 		499156D117820908007CEA07 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 499156D017820908007CEA07 /* Default-568h@2x.png */; };
+		499156DB17820967007CEA07 /* CardsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499156DA17820967007CEA07 /* CardsViewController.m */; };
+		499156DD1782097A007CEA07 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 499156DC1782097A007CEA07 /* Storyboard.storyboard */; };
+		499156E117820D48007CEA07 /* CardCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 499156E017820D48007CEA07 /* CardCell.m */; };
+		499156E517820E30007CEA07 /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 499156E417820E30007CEA07 /* Card.m */; };
+		499156EB1782143A007CEA07 /* CardStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 499156EA17821439007CEA07 /* CardStack.m */; };
+		49DF33EB178214A800B9CD4A /* CardCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF33EA178214A800B9CD4A /* CardCollection.m */; };
+		49DF33F4178221DF00B9CD4A /* CardHand.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DF33F3178221DF00B9CD4A /* CardHand.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retina_wood_readme.txt; sourceTree = "<group>"; };
+		490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retina_wood_@2x.png"; sourceTree = "<group>"; };
+		490BD5DE178228FD0008DBD6 /* retina_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina_wood.png; sourceTree = "<group>"; };
 		499156B717820908007CEA07 /* cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499156BA17820908007CEA07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		499156BC17820908007CEA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -32,6 +45,19 @@
 		499156CC17820908007CEA07 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		499156CE17820908007CEA07 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		499156D017820908007CEA07 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		499156D917820967007CEA07 /* CardsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsViewController.h; sourceTree = "<group>"; };
+		499156DA17820967007CEA07 /* CardsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsViewController.m; sourceTree = "<group>"; };
+		499156DC1782097A007CEA07 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		499156DF17820D48007CEA07 /* CardCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCell.h; sourceTree = "<group>"; };
+		499156E017820D48007CEA07 /* CardCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCell.m; sourceTree = "<group>"; };
+		499156E317820E30007CEA07 /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		499156E417820E30007CEA07 /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		499156E917821439007CEA07 /* CardStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardStack.h; sourceTree = "<group>"; };
+		499156EA17821439007CEA07 /* CardStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardStack.m; sourceTree = "<group>"; };
+		49DF33E9178214A800B9CD4A /* CardCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollection.h; sourceTree = "<group>"; };
+		49DF33EA178214A800B9CD4A /* CardCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollection.m; sourceTree = "<group>"; };
+		49DF33F2178221DF00B9CD4A /* CardHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardHand.h; sourceTree = "<group>"; };
+		49DF33F3178221DF00B9CD4A /* CardHand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardHand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +74,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		490BD5DB178228E60008DBD6 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */,
+				490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */,
+				490BD5DE178228FD0008DBD6 /* retina_wood.png */,
+			);
+			name = resources;
+			sourceTree = "<group>";
+		};
 		499156AE17820908007CEA07 = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +114,11 @@
 		499156C017820908007CEA07 /* cards */ = {
 			isa = PBXGroup;
 			children = (
+				490BD5DB178228E60008DBD6 /* resources */,
+				499156DC1782097A007CEA07 /* Storyboard.storyboard */,
+				499156E217820E0C007CEA07 /* models */,
+				499156DE17820D2A007CEA07 /* views */,
+				499156D81782094D007CEA07 /* controllers */,
 				499156C917820908007CEA07 /* AppDelegate.h */,
 				499156CA17820908007CEA07 /* AppDelegate.m */,
 				499156C117820908007CEA07 /* Supporting Files */,
@@ -97,6 +138,39 @@
 				499156D017820908007CEA07 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		499156D81782094D007CEA07 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				499156D917820967007CEA07 /* CardsViewController.h */,
+				499156DA17820967007CEA07 /* CardsViewController.m */,
+			);
+			name = controllers;
+			sourceTree = "<group>";
+		};
+		499156DE17820D2A007CEA07 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				499156DF17820D48007CEA07 /* CardCell.h */,
+				499156E017820D48007CEA07 /* CardCell.m */,
+			);
+			name = views;
+			sourceTree = "<group>";
+		};
+		499156E217820E0C007CEA07 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				499156E317820E30007CEA07 /* Card.h */,
+				499156E417820E30007CEA07 /* Card.m */,
+				49DF33E9178214A800B9CD4A /* CardCollection.h */,
+				49DF33EA178214A800B9CD4A /* CardCollection.m */,
+				499156E917821439007CEA07 /* CardStack.h */,
+				499156EA17821439007CEA07 /* CardStack.m */,
+				49DF33F2178221DF00B9CD4A /* CardHand.h */,
+				49DF33F3178221DF00B9CD4A /* CardHand.m */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +228,10 @@
 				499156CD17820908007CEA07 /* Default.png in Resources */,
 				499156CF17820908007CEA07 /* Default@2x.png in Resources */,
 				499156D117820908007CEA07 /* Default-568h@2x.png in Resources */,
+				499156DD1782097A007CEA07 /* Storyboard.storyboard in Resources */,
+				490BD5DF178228FD0008DBD6 /* retina_wood_readme.txt in Resources */,
+				490BD5E0178228FD0008DBD6 /* retina_wood_@2x.png in Resources */,
+				490BD5E1178228FD0008DBD6 /* retina_wood.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +244,12 @@
 			files = (
 				499156C717820908007CEA07 /* main.m in Sources */,
 				499156CB17820908007CEA07 /* AppDelegate.m in Sources */,
+				499156DB17820967007CEA07 /* CardsViewController.m in Sources */,
+				499156E117820D48007CEA07 /* CardCell.m in Sources */,
+				499156E517820E30007CEA07 /* Card.m in Sources */,
+				499156EB1782143A007CEA07 /* CardStack.m in Sources */,
+				49DF33EB178214A800B9CD4A /* CardCollection.m in Sources */,
+				49DF33F4178221DF00B9CD4A /* CardHand.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +366,7 @@
 				499156D617820908007CEA07 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
