@@ -30,15 +30,15 @@
 {
     switch (self.suit) {
         case CardSuitRed:
-            return [UIColor redColor];
+            return [UIColor colorWithRed:1.0 green:0.23137254901961 blue:0.18823529411765 alpha:1.0];
         case CardSuitGreen:
-            return [UIColor greenColor];
+            return [UIColor colorWithRed:76.0/255.0 green:217/255.0 blue:100/255.0 alpha:1.0];
         case CardSuitYellow:
-            return [UIColor yellowColor];
+            return [UIColor colorWithRed:1.0 green:204/255.0 blue:0 alpha:1.0];
         case CardSuitBlack:
-            return [UIColor blackColor];
+            return [UIColor colorWithRed:142/255.0 green:142/255.0 blue:147/255.0 alpha:1.0];
         case CardSuitWild:
-            return [UIColor blueColor];
+            return [UIColor colorWithRed:0 green:122/255.0 blue:1.0 alpha:1.0];
         default:
             break;
     }

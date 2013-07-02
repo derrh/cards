@@ -9,6 +9,8 @@
 #import "CardCell.h"
 #import "Card.h"
 
+#import <QuartzCore/QuartzCore.h>
+
 @interface CardCell ()
 @property (nonatomic) IBOutlet UIView *fardFaceView;
 @property (nonatomic) IBOutlet UILabel *bigNumberLabel;
@@ -25,6 +27,13 @@
     } else {
         self.littleNumberLabel.text = self.bigNumberLabel.text = [NSString stringWithFormat:@"%u", card.faceValue];
     }
+}
+
+- (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
+{
+    [super applyLayoutAttributes:layoutAttributes];
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    self.layer.shouldRasterize = YES;
 }
 
 @end

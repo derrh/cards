@@ -12,6 +12,7 @@
 #import "CardCell.h"
 #import "CardStack.h"
 #import "CardHand.h"
+#import "HeaderView.h"
 
 @interface CardsViewController ()
 @property (nonatomic) NSArray *collections;
@@ -24,16 +25,22 @@
     [super viewDidLoad];
     
     UIView *background = [[UIView alloc] init];
-    background.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"retina_wood.png"]];
+    background.backgroundColor = [UIColor whiteColor];
     self.collectionView.backgroundView = background;
 
     CardStack *drawPile = [CardStack shuffledDeck];
+    drawPile.isDrawPile = YES;
     CardStack *discardPile = [[CardStack alloc] init];
     
     NSArray *players = @[[[CardHand alloc] init],
                          [[CardHand alloc] init],
                          [[CardHand alloc] init],
                          [[CardHand alloc] init]];
+    
+    NSInteger playerIndex = 1;
+    for (CardHand *hand in players) {
+        hand.playerName = [NSString stringWithFormat:@"Player %d", playerIndex++];
+    }
     
     for (NSInteger cardCount = 0; cardCount < 5; ++cardCount) {
         for (CardHand *hand in players) {
@@ -73,6 +80,18 @@
     return cell;
 }
 
-
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath
+{
+    HeaderView *header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"HeaderView" forIndexPath:indexPath];
+    
+    CardCollection *collection = self.collections[indexPath.section];
+    
+    if ([collection isKindOfClass:[CardHand class]]) {
+        header.titleLabel.text = [(CardHand *)collection playerName];
+    } else if ([collection isKindOfClass:[CardStack class]]) {
+        header.titleLabel.text = ([(CardStack *)collection isDrawPile]) ? @"Draw Pile" : @"Discard Pile";
+    }
+    return header;
+}
 
 @end

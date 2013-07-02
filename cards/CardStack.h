@@ -12,4 +12,5 @@
 @interface CardStack : CardCollection
 + (instancetype)shuffledDeck;
 
+@property (nonatomic) BOOL isDrawPile;
 @end

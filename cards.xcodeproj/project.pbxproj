@@ -7,9 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		490BD5DF178228FD0008DBD6 /* retina_wood_readme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */; };
-		490BD5E0178228FD0008DBD6 /* retina_wood_@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */; };
-		490BD5E1178228FD0008DBD6 /* retina_wood.png in Resources */ = {isa = PBXBuildFile; fileRef = 490BD5DE178228FD0008DBD6 /* retina_wood.png */; };
+		490BD5F2178363CF0008DBD6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490BD5F1178363CF0008DBD6 /* HeaderView.m */; };
 		499156BB17820908007CEA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BA17820908007CEA07 /* UIKit.framework */; };
 		499156BD17820908007CEA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BC17820908007CEA07 /* Foundation.framework */; };
 		499156BF17820908007CEA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BE17820908007CEA07 /* CoreGraphics.framework */; };
@@ -29,9 +27,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = retina_wood_readme.txt; sourceTree = "<group>"; };
-		490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "retina_wood_@2x.png"; sourceTree = "<group>"; };
-		490BD5DE178228FD0008DBD6 /* retina_wood.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = retina_wood.png; sourceTree = "<group>"; };
+		490BD5F0178363CF0008DBD6 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		490BD5F1178363CF0008DBD6 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
 		499156B717820908007CEA07 /* cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499156BA17820908007CEA07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		499156BC17820908007CEA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -74,16 +71,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		490BD5DB178228E60008DBD6 /* resources */ = {
-			isa = PBXGroup;
-			children = (
-				490BD5DC178228FD0008DBD6 /* retina_wood_readme.txt */,
-				490BD5DD178228FD0008DBD6 /* retina_wood_@2x.png */,
-				490BD5DE178228FD0008DBD6 /* retina_wood.png */,
-			);
-			name = resources;
-			sourceTree = "<group>";
-		};
 		499156AE17820908007CEA07 = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +101,6 @@
 		499156C017820908007CEA07 /* cards */ = {
 			isa = PBXGroup;
 			children = (
-				490BD5DB178228E60008DBD6 /* resources */,
 				499156DC1782097A007CEA07 /* Storyboard.storyboard */,
 				499156E217820E0C007CEA07 /* models */,
 				499156DE17820D2A007CEA07 /* views */,
@@ -154,6 +140,8 @@
 			children = (
 				499156DF17820D48007CEA07 /* CardCell.h */,
 				499156E017820D48007CEA07 /* CardCell.m */,
+				490BD5F0178363CF0008DBD6 /* HeaderView.h */,
+				490BD5F1178363CF0008DBD6 /* HeaderView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -229,9 +217,6 @@
 				499156CF17820908007CEA07 /* Default@2x.png in Resources */,
 				499156D117820908007CEA07 /* Default-568h@2x.png in Resources */,
 				499156DD1782097A007CEA07 /* Storyboard.storyboard in Resources */,
-				490BD5DF178228FD0008DBD6 /* retina_wood_readme.txt in Resources */,
-				490BD5E0178228FD0008DBD6 /* retina_wood_@2x.png in Resources */,
-				490BD5E1178228FD0008DBD6 /* retina_wood.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +235,7 @@
 				499156EB1782143A007CEA07 /* CardStack.m in Sources */,
 				49DF33EB178214A800B9CD4A /* CardCollection.m in Sources */,
 				49DF33F4178221DF00B9CD4A /* CardHand.m in Sources */,
+				490BD5F2178363CF0008DBD6 /* HeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

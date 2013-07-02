@@ -9,5 +9,5 @@
 #import "CardCollection.h"
 
 @interface CardHand : CardCollection
-
+@property (nonatomic) NSString *playerName;
 @end
