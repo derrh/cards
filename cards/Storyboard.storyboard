@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HK9-9k-mX3">
     <dependencies>
+        <deployment defaultVersion="1552" identifier="iOS"/>
+        <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -27,7 +29,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1A8-xj-R4x">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1A8-xj-R4x" customClass="CardsFlowLayout">
                             <size key="itemSize" width="92" height="140"/>
                             <size key="headerReferenceSize" width="50" height="37"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -41,6 +43,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="92" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXx-sw-qWa">
+                                            <color key="backgroundColor" red="0.94901960780000005" green="0.33725490200000002" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHS-S3-ijF">
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A52-6C-6px">
@@ -73,11 +78,16 @@
                                 </view>
                                 <constraints>
                                     <constraint firstItem="IHS-S3-ijF" firstAttribute="leading" secondItem="E6s-vg-UGS" secondAttribute="leading" type="user" id="03D-W4-n5J"/>
-                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="bottom" secondItem="E6s-vg-UGS" secondAttribute="bottom" type="default" id="95n-O1-gMB"/>
-                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="top" secondItem="E6s-vg-UGS" secondAttribute="top" type="default" id="fAS-P4-2jU"/>
+                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="bottom" secondItem="E6s-vg-UGS" secondAttribute="bottom" type="default" id="D1A-Yr-V8y"/>
+                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="top" secondItem="E6s-vg-UGS" secondAttribute="top" type="default" id="JeH-97-oF8"/>
+                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="trailing" secondItem="E6s-vg-UGS" secondAttribute="trailing" type="default" id="NCq-dW-XKj"/>
+                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="top" secondItem="E6s-vg-UGS" secondAttribute="top" type="default" id="PXX-fL-JDh"/>
+                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="bottom" secondItem="E6s-vg-UGS" secondAttribute="bottom" type="default" id="fKh-g9-fdr"/>
+                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="leading" secondItem="E6s-vg-UGS" secondAttribute="leading" type="default" id="pA2-Vo-Qei"/>
                                     <constraint firstAttribute="trailing" secondItem="IHS-S3-ijF" secondAttribute="trailing" constant="-4" id="w5W-tW-5pO"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="backView" destination="ZXx-sw-qWa" id="tAh-nC-B5n"/>
                                     <outlet property="bigNumberLabel" destination="Uie-YH-lim" id="0Al-MW-jEY"/>
                                     <outlet property="fardFaceView" destination="IHS-S3-ijF" id="lVg-2e-eUc"/>
                                     <outlet property="littleNumberLabel" destination="A52-6C-6px" id="Cac-st-JMl"/>
@@ -111,7 +121,13 @@
                             <outlet property="delegate" destination="rNM-Qo-8ly" id="g1p-We-VVi"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ecz-TY-wwp"/>
+                    <navigationItem key="navigationItem" id="ecz-TY-wwp">
+                        <barButtonItem key="rightBarButtonItem" title="Toggle" id="1ut-6F-zNV">
+                            <connections>
+                                <action selector="toggleLayouts:" destination="rNM-Qo-8ly" id="QQL-7M-45K"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r6a-7d-fNu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,10 +138,14 @@
         <class className="CardCell" superclassName="UICollectionViewCell">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardCell.h"/>
             <relationships>
+                <relationship kind="outlet" name="backView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="bigNumberLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="fardFaceView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="littleNumberLabel" candidateClass="UILabel"/>
             </relationships>
+        </class>
+        <class className="CardsFlowLayout" superclassName="UICollectionViewFlowLayout">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CardsFlowLayout.h"/>
         </class>
         <class className="CardsViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardsViewController.h"/>
@@ -150,6 +170,9 @@
         </class>
         <class className="UICollectionViewFlowLayout" superclassName="UICollectionViewLayout">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewFlowLayout.h"/>
+        </class>
+        <class className="UICollectionViewLayout" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionViewLayout.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

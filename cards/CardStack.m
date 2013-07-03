@@ -8,6 +8,7 @@
 
 #import "CardStack.h"
 #import "Card.h"
+#import "MessyStackCardCollectionLayoutHelper.h"
 
 @implementation CardStack
 
@@ -44,4 +45,11 @@
     return me;
 }
 
+
+- (CardCollectionLayoutHelper *)layoutHelper
+{
+    MessyStackCardCollectionLayoutHelper *helper = [MessyStackCardCollectionLayoutHelper layout];
+    helper.revealed = !self.isDrawPile;
+    return helper;
+}
 @end

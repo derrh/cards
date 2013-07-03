@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		490BD5F2178363CF0008DBD6 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 490BD5F1178363CF0008DBD6 /* HeaderView.m */; };
+		490E486517839A2800A9C021 /* CardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E485E17839A2800A9C021 /* CardCollectionLayoutHelper.m */; };
+		490E486617839A2800A9C021 /* FanCardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486017839A2800A9C021 /* FanCardCollectionLayoutHelper.m */; };
+		490E486717839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486217839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m */; };
+		490E486817839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486417839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m */; };
+		490E486B17839A5200A9C021 /* CardGameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486A17839A5200A9C021 /* CardGameLayout.m */; };
+		494F885D17838E5400EFB955 /* back_patter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494F885C17838E5400EFB955 /* back_patter@2x.png */; };
+		494F885F17838F2A00EFB955 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494F885E17838F2A00EFB955 /* QuartzCore.framework */; };
+		494F886117838FAD00EFB955 /* back_patter.png in Resources */ = {isa = PBXBuildFile; fileRef = 494F886017838FAD00EFB955 /* back_patter.png */; };
+		494F886517838FE900EFB955 /* CardsFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F886417838FE900EFB955 /* CardsFlowLayout.m */; };
+		494F88681783913700EFB955 /* CardLayoutAttributes.m in Sources */ = {isa = PBXBuildFile; fileRef = 494F88671783913700EFB955 /* CardLayoutAttributes.m */; };
 		499156BB17820908007CEA07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BA17820908007CEA07 /* UIKit.framework */; };
 		499156BD17820908007CEA07 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BC17820908007CEA07 /* Foundation.framework */; };
 		499156BF17820908007CEA07 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 499156BE17820908007CEA07 /* CoreGraphics.framework */; };
@@ -29,6 +39,24 @@
 /* Begin PBXFileReference section */
 		490BD5F0178363CF0008DBD6 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
 		490BD5F1178363CF0008DBD6 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		490E485D17839A2800A9C021 /* CardCollectionLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardCollectionLayoutHelper.h; sourceTree = "<group>"; };
+		490E485E17839A2800A9C021 /* CardCollectionLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardCollectionLayoutHelper.m; sourceTree = "<group>"; };
+		490E485F17839A2800A9C021 /* FanCardCollectionLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanCardCollectionLayoutHelper.h; sourceTree = "<group>"; };
+		490E486017839A2800A9C021 /* FanCardCollectionLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FanCardCollectionLayoutHelper.m; sourceTree = "<group>"; };
+		490E486117839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessyStackCardCollectionLayoutHelper.h; sourceTree = "<group>"; };
+		490E486217839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessyStackCardCollectionLayoutHelper.m; sourceTree = "<group>"; };
+		490E486317839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersHandCardCollectionLayoutHelper.h; sourceTree = "<group>"; };
+		490E486417839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersHandCardCollectionLayoutHelper.m; sourceTree = "<group>"; };
+		490E486917839A5200A9C021 /* CardGameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameLayout.h; sourceTree = "<group>"; };
+		490E486A17839A5200A9C021 /* CardGameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameLayout.m; sourceTree = "<group>"; };
+		490E486C17839A9400A9C021 /* CardLayoutDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardLayoutDelegate.h; sourceTree = "<group>"; };
+		494F885C17838E5400EFB955 /* back_patter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_patter@2x.png"; sourceTree = "<group>"; };
+		494F885E17838F2A00EFB955 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		494F886017838FAD00EFB955 /* back_patter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_patter.png; sourceTree = "<group>"; };
+		494F886317838FE900EFB955 /* CardsFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardsFlowLayout.h; sourceTree = "<group>"; };
+		494F886417838FE900EFB955 /* CardsFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardsFlowLayout.m; sourceTree = "<group>"; };
+		494F88661783913600EFB955 /* CardLayoutAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardLayoutAttributes.h; sourceTree = "<group>"; };
+		494F88671783913700EFB955 /* CardLayoutAttributes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardLayoutAttributes.m; sourceTree = "<group>"; };
 		499156B717820908007CEA07 /* cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		499156BA17820908007CEA07 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		499156BC17820908007CEA07 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -62,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				494F885F17838F2A00EFB955 /* QuartzCore.framework in Frameworks */,
 				499156BB17820908007CEA07 /* UIKit.framework in Frameworks */,
 				499156BD17820908007CEA07 /* Foundation.framework in Frameworks */,
 				499156BF17820908007CEA07 /* CoreGraphics.framework in Frameworks */,
@@ -71,6 +100,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		494F886217838FC400EFB955 /* layouts */ = {
+			isa = PBXGroup;
+			children = (
+				490E485D17839A2800A9C021 /* CardCollectionLayoutHelper.h */,
+				490E485E17839A2800A9C021 /* CardCollectionLayoutHelper.m */,
+				490E485F17839A2800A9C021 /* FanCardCollectionLayoutHelper.h */,
+				490E486017839A2800A9C021 /* FanCardCollectionLayoutHelper.m */,
+				490E486117839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.h */,
+				490E486217839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m */,
+				490E486317839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.h */,
+				490E486417839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m */,
+				494F886317838FE900EFB955 /* CardsFlowLayout.h */,
+				494F886417838FE900EFB955 /* CardsFlowLayout.m */,
+				494F88661783913600EFB955 /* CardLayoutAttributes.h */,
+				494F88671783913700EFB955 /* CardLayoutAttributes.m */,
+				490E486917839A5200A9C021 /* CardGameLayout.h */,
+				490E486A17839A5200A9C021 /* CardGameLayout.m */,
+				490E486C17839A9400A9C021 /* CardLayoutDelegate.h */,
+			);
+			name = layouts;
+			sourceTree = "<group>";
+		};
 		499156AE17820908007CEA07 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +142,7 @@
 		499156B917820908007CEA07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				494F885E17838F2A00EFB955 /* QuartzCore.framework */,
 				499156BA17820908007CEA07 /* UIKit.framework */,
 				499156BC17820908007CEA07 /* Foundation.framework */,
 				499156BE17820908007CEA07 /* CoreGraphics.framework */,
@@ -101,6 +153,8 @@
 		499156C017820908007CEA07 /* cards */ = {
 			isa = PBXGroup;
 			children = (
+				494F885C17838E5400EFB955 /* back_patter@2x.png */,
+				494F886017838FAD00EFB955 /* back_patter.png */,
 				499156DC1782097A007CEA07 /* Storyboard.storyboard */,
 				499156E217820E0C007CEA07 /* models */,
 				499156DE17820D2A007CEA07 /* views */,
@@ -138,6 +192,7 @@
 		499156DE17820D2A007CEA07 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				494F886217838FC400EFB955 /* layouts */,
 				499156DF17820D48007CEA07 /* CardCell.h */,
 				499156E017820D48007CEA07 /* CardCell.m */,
 				490BD5F0178363CF0008DBD6 /* HeaderView.h */,
@@ -217,6 +272,8 @@
 				499156CF17820908007CEA07 /* Default@2x.png in Resources */,
 				499156D117820908007CEA07 /* Default-568h@2x.png in Resources */,
 				499156DD1782097A007CEA07 /* Storyboard.storyboard in Resources */,
+				494F885D17838E5400EFB955 /* back_patter@2x.png in Resources */,
+				494F886117838FAD00EFB955 /* back_patter.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +293,13 @@
 				49DF33EB178214A800B9CD4A /* CardCollection.m in Sources */,
 				49DF33F4178221DF00B9CD4A /* CardHand.m in Sources */,
 				490BD5F2178363CF0008DBD6 /* HeaderView.m in Sources */,
+				494F886517838FE900EFB955 /* CardsFlowLayout.m in Sources */,
+				494F88681783913700EFB955 /* CardLayoutAttributes.m in Sources */,
+				490E486517839A2800A9C021 /* CardCollectionLayoutHelper.m in Sources */,
+				490E486617839A2800A9C021 /* FanCardCollectionLayoutHelper.m in Sources */,
+				490E486717839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m in Sources */,
+				490E486817839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m in Sources */,
+				490E486B17839A5200A9C021 /* CardGameLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

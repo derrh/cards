@@ -10,4 +10,5 @@
 
 @interface CardHand : CardCollection
 @property (nonatomic) NSString *playerName;
+@property (nonatomic, getter = isMe) BOOL me;
 @end

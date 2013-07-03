@@ -13,8 +13,10 @@
 #import "CardStack.h"
 #import "CardHand.h"
 #import "HeaderView.h"
+#import "CardLayoutDelegate.h"
+#import "CardGameLayout.h"
 
-@interface CardsViewController ()
+@interface CardsViewController () <CardLayoutDelegate>
 @property (nonatomic) NSArray *collections;
 @end
 
@@ -39,6 +41,7 @@
     
     NSInteger playerIndex = 1;
     for (CardHand *hand in players) {
+        hand.me = playerIndex == 1;
         hand.playerName = [NSString stringWithFormat:@"Player %d", playerIndex++];
     }
     
@@ -52,6 +55,15 @@
     
     self.collections = [players arrayByAddingObjectsFromArray:@[drawPile, discardPile]];
 }
+
+#pragma mark - Actions
+
+- (IBAction)toggleLayouts:(id)sender {
+    if ([self.collectionView.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]]) {
+        self.collectionView.collectionViewLayout = [[CardGameLayout alloc] init];
+    }
+}
+
 
 
 #pragma mark - UICollectionViewDataSource
@@ -92,6 +104,23 @@
         header.titleLabel.text = ([(CardStack *)collection isDrawPile]) ? @"Draw Pile" : @"Discard Pile";
     }
     return header;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout cardIsRevealedAtIndexPath:(NSIndexPath *)indexPath
+{
+    CardCollection *collection = self.collections[indexPath.section];
+    if ([collection isKindOfClass:[CardHand class]]) {
+        return [(CardHand *)collection isMe];
+    } else if ([collection isKindOfClass:[CardStack class]]) {
+        return ![(CardStack *)collection isDrawPile];
+    }
+    return NO;
+}
+
+- (CardCollectionLayoutHelper *)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout layoutHelperForCardCollectionSection:(NSInteger)section
+{
+    CardCollection *collection = self.collections[section];
+    return [collection layoutHelper];
 }
 
 @end

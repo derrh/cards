@@ -42,4 +42,10 @@
     return c;
 }
 
+
+- (CardCollectionLayoutHelper *)layoutHelper
+{
+    return [CardCollectionLayoutHelper layout];
+}
+
 @end

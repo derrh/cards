@@ -8,16 +8,33 @@
 
 #import "CardCell.h"
 #import "Card.h"
+#import "CardLayoutAttributes.h"
 
 #import <QuartzCore/QuartzCore.h>
 
 @interface CardCell ()
+@property (nonatomic) IBOutlet UIView *backView;
 @property (nonatomic) IBOutlet UIView *fardFaceView;
 @property (nonatomic) IBOutlet UILabel *bigNumberLabel;
 @property (nonatomic) IBOutlet UILabel *littleNumberLabel;
 @end
 
 @implementation CardCell
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+}
+
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    self.fardFaceView.layer.doubleSided = NO;
+    self.backView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back_patter.png"]];
+
+    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
+    self.layer.shouldRasterize = YES;
+}
 
 - (void)setCard:(Card *)card
 {
@@ -32,8 +49,10 @@
 - (void)applyLayoutAttributes:(UICollectionViewLayoutAttributes *)layoutAttributes
 {
     [super applyLayoutAttributes:layoutAttributes];
-    self.layer.rasterizationScale = [UIScreen mainScreen].scale;
-    self.layer.shouldRasterize = YES;
+
+    BOOL shown = ((CardLayoutAttributes *)layoutAttributes).revealed;
+    self.fardFaceView.hidden = !shown;
+    self.backView.hidden = shown;
 }
 
 @end

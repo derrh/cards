@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CardCollectionLayoutHelper.h"
 
 @class Card;
 @interface CardCollection : NSObject
@@ -15,4 +16,6 @@
 - (void)pushCard:(Card *)card;
 - (void)pushCards:(NSArray *)cards;
 - (Card *)popCard;
+
+- (CardCollectionLayoutHelper *)layoutHelper;
 @end

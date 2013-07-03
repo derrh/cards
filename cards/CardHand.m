@@ -7,7 +7,17 @@
 //
 
 #import "CardHand.h"
+#import "PlayersHandCardCollectionLayoutHelper.h"
 
 @implementation CardHand
+
+- (CardCollectionLayoutHelper *)layoutHelper
+{
+    if (self.isMe) {
+        return [PlayersHandCardCollectionLayoutHelper layout];
+    } else {
+        return [FanCardCollectionLayoutHelper layout];
+    }
+}
 
 @end
