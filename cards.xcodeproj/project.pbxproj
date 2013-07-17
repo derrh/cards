@@ -13,6 +13,7 @@
 		490E486717839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486217839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m */; };
 		490E486817839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486417839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m */; };
 		490E486B17839A5200A9C021 /* CardGameLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 490E486A17839A5200A9C021 /* CardGameLayout.m */; };
+		4943C62817964FD4008E1B08 /* ParallaxLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4943C62717964FD4008E1B08 /* ParallaxLayout.m */; };
 		494F885D17838E5400EFB955 /* back_patter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 494F885C17838E5400EFB955 /* back_patter@2x.png */; };
 		494F885F17838F2A00EFB955 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 494F885E17838F2A00EFB955 /* QuartzCore.framework */; };
 		494F886117838FAD00EFB955 /* back_patter.png in Resources */ = {isa = PBXBuildFile; fileRef = 494F886017838FAD00EFB955 /* back_patter.png */; };
@@ -50,6 +51,8 @@
 		490E486917839A5200A9C021 /* CardGameLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardGameLayout.h; sourceTree = "<group>"; };
 		490E486A17839A5200A9C021 /* CardGameLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardGameLayout.m; sourceTree = "<group>"; };
 		490E486C17839A9400A9C021 /* CardLayoutDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardLayoutDelegate.h; sourceTree = "<group>"; };
+		4943C62617964FD4008E1B08 /* ParallaxLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParallaxLayout.h; sourceTree = "<group>"; };
+		4943C62717964FD4008E1B08 /* ParallaxLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParallaxLayout.m; sourceTree = "<group>"; };
 		494F885C17838E5400EFB955 /* back_patter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "back_patter@2x.png"; sourceTree = "<group>"; };
 		494F885E17838F2A00EFB955 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		494F886017838FAD00EFB955 /* back_patter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_patter.png; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				490E486917839A5200A9C021 /* CardGameLayout.h */,
 				490E486A17839A5200A9C021 /* CardGameLayout.m */,
 				490E486C17839A9400A9C021 /* CardLayoutDelegate.h */,
+				4943C62617964FD4008E1B08 /* ParallaxLayout.h */,
+				4943C62717964FD4008E1B08 /* ParallaxLayout.m */,
 			);
 			name = layouts;
 			sourceTree = "<group>";
@@ -300,6 +305,7 @@
 				490E486717839A2800A9C021 /* MessyStackCardCollectionLayoutHelper.m in Sources */,
 				490E486817839A2800A9C021 /* PlayersHandCardCollectionLayoutHelper.m in Sources */,
 				490E486B17839A5200A9C021 /* CardGameLayout.m in Sources */,
+				4943C62817964FD4008E1B08 /* ParallaxLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

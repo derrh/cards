@@ -9,8 +9,8 @@
 #import "FanCardCollectionLayoutHelper.h"
 #import "CardLayoutAttributes.h"
 
-#define kCardMinAngle M_PI/25.f
-#define kCardFanRadius 300
+#define kCardMinAngle M_PI/12.f
+#define kCardFanRadius 200
 
 
 @implementation FanCardCollectionLayoutHelper

@@ -20,6 +20,11 @@ static const CGFloat HeightForCollection = 240;
     return [CardLayoutAttributes class];
 }
 
+- (void)prepareLayout
+{
+    
+}
+
 - (NSArray *)layoutAttributesForElementsInRect:(CGRect)rect
 {
     NSMutableArray *allLayoutAttributes = [NSMutableArray arrayWithCapacity:57];
@@ -54,6 +59,12 @@ static const CGFloat HeightForCollection = 240;
 
 - (CGSize)collectionViewContentSize {
     return CGSizeMake(self.collectionView.bounds.size.width, [self.collectionView numberOfSections] * HeightForCollection);
+}
+
+
+- (BOOL)shouldInvalidateLayoutForBoundsChange:(CGRect)newBounds
+{
+    return NO;
 }
 
 @end

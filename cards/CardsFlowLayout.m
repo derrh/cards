@@ -22,7 +22,7 @@
     NSArray *allAttributes = [super layoutAttributesForElementsInRect:rect];
     for (CardLayoutAttributes *attributes in allAttributes) {
         if ([attributes isKindOfClass:[CardLayoutAttributes class]]) {
-            attributes.revealed = [((id<CardLayoutDelegate>)self.collectionView.delegate) collectionView:self.collectionView layout:self cardIsRevealedAtIndexPath:attributes.indexPath];
+            attributes.revealed = [((id<CardLayoutDelegate>)self.collectionView.delegate) collectionView:self.collectionView layout:self isCardRevealedAtIndexPath:attributes.indexPath];
         }
     }
     
@@ -33,7 +33,7 @@
 {
     CardLayoutAttributes *attributes = (CardLayoutAttributes *)[super layoutAttributesForItemAtIndexPath:indexPath];
     if ([attributes isKindOfClass:[CardLayoutAttributes class]]) {
-        attributes.revealed = [((id<CardLayoutDelegate>)self.collectionView.delegate) collectionView:self.collectionView layout:self cardIsRevealedAtIndexPath:attributes.indexPath];
+        attributes.revealed = [((id<CardLayoutDelegate>)self.collectionView.delegate) collectionView:self.collectionView layout:self isCardRevealedAtIndexPath:attributes.indexPath];
     }
     return attributes;
 }

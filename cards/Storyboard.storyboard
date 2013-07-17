@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="HK9-9k-mX3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="13A497d" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="HK9-9k-mX3">
     <dependencies>
-        <deployment defaultVersion="1552" identifier="iOS"/>
         <development version="4600" identifier="xcode"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -29,11 +28,11 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1A8-xj-R4x" customClass="CardsFlowLayout">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="50" minimumInteritemSpacing="50" id="1A8-xj-R4x" customClass="CardsFlowLayout">
                             <size key="itemSize" width="92" height="140"/>
                             <size key="headerReferenceSize" width="50" height="37"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="30"/>
+                            <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="100"/>
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="E6s-vg-UGS" customClass="CardCell">
@@ -43,49 +42,33 @@
                                     <rect key="frame" x="0.0" y="0.0" width="92" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXx-sw-qWa">
+                                        <view contentMode="scaleToFill" id="ZXx-sw-qWa">
+                                            <rect key="frame" x="0.0" y="0.0" width="92" height="140"/>
                                             <color key="backgroundColor" red="0.94901960780000005" green="0.33725490200000002" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHS-S3-ijF">
+                                        <view contentMode="scaleToFill" id="IHS-S3-ijF">
+                                            <rect key="frame" x="0.0" y="0.0" width="96" height="140"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A52-6C-6px">
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="44" id="6SQ-y3-pV7"/>
-                                                    </constraints>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A52-6C-6px">
+                                                    <rect key="frame" x="4" y="-2" width="55" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="39"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uie-YH-lim">
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="86" id="Eog-5i-TZg"/>
-                                                    </constraints>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="7" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Uie-YH-lim">
+                                                    <rect key="frame" x="4" y="62" width="87" height="86"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="73"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="A52-6C-6px" firstAttribute="leading" secondItem="IHS-S3-ijF" secondAttribute="leading" type="default" id="9ml-pz-HhG"/>
-                                                <constraint firstAttribute="trailing" secondItem="Uie-YH-lim" secondAttribute="trailing" constant="5" type="user" id="Fqa-Ui-MqN"/>
-                                                <constraint firstItem="A52-6C-6px" firstAttribute="top" secondItem="IHS-S3-ijF" secondAttribute="top" constant="-3" id="Lvl-2F-7VA"/>
-                                                <constraint firstItem="Uie-YH-lim" firstAttribute="top" secondItem="IHS-S3-ijF" secondAttribute="top" constant="62" id="Ymq-eO-ziJ"/>
-                                            </constraints>
                                         </view>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
-                                <constraints>
-                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="leading" secondItem="E6s-vg-UGS" secondAttribute="leading" type="user" id="03D-W4-n5J"/>
-                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="bottom" secondItem="E6s-vg-UGS" secondAttribute="bottom" type="default" id="D1A-Yr-V8y"/>
-                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="top" secondItem="E6s-vg-UGS" secondAttribute="top" type="default" id="JeH-97-oF8"/>
-                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="trailing" secondItem="E6s-vg-UGS" secondAttribute="trailing" type="default" id="NCq-dW-XKj"/>
-                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="top" secondItem="E6s-vg-UGS" secondAttribute="top" type="default" id="PXX-fL-JDh"/>
-                                    <constraint firstItem="IHS-S3-ijF" firstAttribute="bottom" secondItem="E6s-vg-UGS" secondAttribute="bottom" type="default" id="fKh-g9-fdr"/>
-                                    <constraint firstItem="ZXx-sw-qWa" firstAttribute="leading" secondItem="E6s-vg-UGS" secondAttribute="leading" type="default" id="pA2-Vo-Qei"/>
-                                    <constraint firstAttribute="trailing" secondItem="IHS-S3-ijF" secondAttribute="trailing" constant="-4" id="w5W-tW-5pO"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="backView" destination="ZXx-sw-qWa" id="tAh-nC-B5n"/>
                                     <outlet property="bigNumberLabel" destination="Uie-YH-lim" id="0Al-MW-jEY"/>
@@ -98,20 +81,13 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <subviews>
-                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="300" translatesAutoresizingMaskIntoConstraints="NO" id="gZm-jB-6rZ">
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="21" id="SJc-dd-Nbp"/>
-                                    </constraints>
+                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gZm-jB-6rZ">
+                                    <rect key="frame" x="10" y="8" width="300" height="21"/>
                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="23"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <constraints>
-                                <constraint firstAttribute="trailing" secondItem="gZm-jB-6rZ" secondAttribute="trailing" constant="10" type="user" id="Knp-5R-oim"/>
-                                <constraint firstItem="gZm-jB-6rZ" firstAttribute="centerY" secondItem="Bed-yo-Mpe" secondAttribute="centerY" type="default" id="jZg-xm-KpU"/>
-                                <constraint firstItem="gZm-jB-6rZ" firstAttribute="leading" secondItem="Bed-yo-Mpe" secondAttribute="leading" constant="10" type="user" id="nBt-I3-fPt"/>
-                            </constraints>
                             <connections>
                                 <outlet property="titleLabel" destination="gZm-jB-6rZ" id="Y9v-4t-3xr"/>
                             </connections>
@@ -149,15 +125,15 @@
         </class>
         <class className="CardsViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CardsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="toggleLayouts:"/>
+            </relationships>
         </class>
         <class className="HeaderView" superclassName="UICollectionReusableView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/HeaderView.h"/>
             <relationships>
                 <relationship kind="outlet" name="titleLabel" candidateClass="UILabel"/>
             </relationships>
-        </class>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
         <class className="UICollectionReusableView" superclassName="UIView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/UICollectionReusableView.h"/>

@@ -10,6 +10,6 @@
 
 @class CardCollectionLayoutHelper;
 @protocol CardLayoutDelegate <UICollectionViewDelegate>
-- (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout cardIsRevealedAtIndexPath:(NSIndexPath *)indexPath;
+- (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout isCardRevealedAtIndexPath:(NSIndexPath *)indexPath;
 - (CardCollectionLayoutHelper *)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout layoutHelperForCardCollectionSection:(NSInteger)section;
 @end

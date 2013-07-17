@@ -33,7 +33,7 @@
     
     for (NSUInteger current = 0; current < [allCards count] - 1; ++current) {
         NSUInteger remainingCount = [allCards count] - (current + 1);
-        NSUInteger randomLocation = (random() % remainingCount) + current + 1;
+        NSUInteger randomLocation = (rand() % remainingCount) + current + 1;
         Card *swap = allCards[current];
         allCards[current] = allCards[randomLocation];
         allCards[randomLocation] = swap;

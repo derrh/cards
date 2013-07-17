@@ -20,9 +20,10 @@
   
   CardLayoutAttributes *cardLayout = [CardLayoutAttributes layoutAttributesForCellWithIndexPath:index];
     CGSize cardSize = CGSizeMake(96, 140);
-  CGPoint disheveledness = CGPointZero; //CGPointMake((rand()%2001/100.f) - 10.f, (rand()%2001/100.f) - 10.f);
-  cardLayout.frame = CGRectMake(self.position.x + disheveledness.x, self.position.y + disheveledness.y, cardSize.width, cardSize.height);
-//  cardLayout.transform3D = CATransform3DMakeRotation((rand()%51)/100.f - 0.25f, 0.f, 0.f, 1.f);
+  CGPoint disheveledness = CGPointMake((rand()%2001/100.f) - 10.f, (rand()%2001/100.f) - 10.f);
+    cardLayout.size = cardSize;
+    cardLayout.center = CGPointMake(self.position.x + disheveledness.x, self.position.y + disheveledness.y);
+  cardLayout.transform3D = CATransform3DMakeRotation((rand()%51)/100.f - 0.25f, 0.f, 0.f, 1.f);
   cardLayout.zIndex = index.item;
   cardLayout.revealed = self.isRevealed;
     cardLayout.zIndex = index.item;

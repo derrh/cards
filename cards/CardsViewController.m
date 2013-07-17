@@ -15,6 +15,8 @@
 #import "HeaderView.h"
 #import "CardLayoutDelegate.h"
 #import "CardGameLayout.h"
+#import "CardsFlowLayout.h"
+#import "ParallaxLayout.h"
 
 @interface CardsViewController () <CardLayoutDelegate>
 @property (nonatomic) NSArray *collections;
@@ -26,9 +28,9 @@
 {
     [super viewDidLoad];
     
-    UIView *background = [[UIView alloc] init];
-    background.backgroundColor = [UIColor whiteColor];
-    self.collectionView.backgroundView = background;
+//    UIView *background = [[UIView alloc] init];
+//    background.backgroundColor = [UIColor whiteColor];
+//    self.collectionView.backgroundView = background;
 
     CardStack *drawPile = [CardStack shuffledDeck];
     drawPile.isDrawPile = YES;
@@ -51,7 +53,8 @@
         }
     }
     
-    [discardPile pushCard:[drawPile popCard]];
+    for (int i= 0; i < 5; ++i)
+        [discardPile pushCard:[drawPile popCard]];
     
     self.collections = [players arrayByAddingObjectsFromArray:@[drawPile, discardPile]];
 }
@@ -59,9 +62,13 @@
 #pragma mark - Actions
 
 - (IBAction)toggleLayouts:(id)sender {
-    if ([self.collectionView.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]]) {
-        self.collectionView.collectionViewLayout = [[CardGameLayout alloc] init];
-    }
+    [UIView animateWithDuration:1.0 animations:^{
+        if ([self.collectionView.collectionViewLayout isKindOfClass:[UICollectionViewFlowLayout class]]) {
+            self.collectionView.collectionViewLayout = [[CardGameLayout alloc] init];
+        } else if ([self.collectionView.collectionViewLayout isKindOfClass:[CardGameLayout class]]) {
+            self.collectionView.collectionViewLayout = [[ParallaxLayout alloc] init];
+        }
+    }];
 }
 
 
@@ -106,7 +113,7 @@
     return header;
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout cardIsRevealedAtIndexPath:(NSIndexPath *)indexPath
+- (BOOL)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)cardLayout isCardRevealedAtIndexPath:(NSIndexPath *)indexPath
 {
     CardCollection *collection = self.collections[indexPath.section];
     if ([collection isKindOfClass:[CardHand class]]) {
