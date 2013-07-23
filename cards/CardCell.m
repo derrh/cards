@@ -30,7 +30,11 @@
 {
     [super awakeFromNib];
     self.fardFaceView.layer.doubleSided = NO;
+    self.fardFaceView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.fardFaceView.layer.borderWidth = .5f;
     self.backView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back_patter.png"]];
+    self.backView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.backView.layer.borderWidth = .5f;
 
     self.layer.rasterizationScale = [UIScreen mainScreen].scale;
     self.layer.shouldRasterize = YES;
